@@ -1,13 +1,15 @@
 import Head from 'next/head'
+import Footer from '../components/footer'
+import Header from '../components/header'
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
+      <Header />
       <Head>
-        <title>Create Next App</title>
+        <title>BhuME</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
@@ -66,7 +68,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
+      {/* <footer className="flex h-24 w-full items-center justify-center border-t">
         <a
           className="flex items-center justify-center"
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -76,7 +78,8 @@ export default function Home() {
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className="ml-2 h-4" />
         </a>
-      </footer>
+      </footer> */}
+      <Footer />
     </div>
   )
 }
