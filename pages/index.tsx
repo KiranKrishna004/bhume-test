@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Footer from '../components/footer'
 import Header from '../components/header'
+import Main from '../components/Main'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <title>BhuME</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Main />
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
