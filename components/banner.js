@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 const Banner = () => {
   const largeCarouselData = [
@@ -38,6 +39,9 @@ const Banner = () => {
             />
           )
         })}
+        <Button btnColor="blue" type="outline">
+          Outline Button
+        </Button>
       </div>
       <div
         className="relative flex h-full h-72 w-full max-w-lg overflow-hidden md:hidden lg:hidden"
