@@ -20,7 +20,6 @@ export default function Home() {
           </a>
         </h1>
       </main>
-
       {/* <footer className="flex h-24 w-full items-center justify-center border-t">
         <a
           className="flex items-center justify-center"
