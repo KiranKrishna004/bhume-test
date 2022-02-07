@@ -49,7 +49,7 @@ const Banner = () => {
           }}
         >
           <Button btnColor='#16a34a' type="outline">
-            Outline Button
+            Recycled / Handmade
           </Button>
         </div>
       </div>
