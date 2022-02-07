@@ -39,9 +39,19 @@ const Banner = () => {
             />
           )
         })}
-        <Button btnColor="blue" type="outline">
-          Outline Button
-        </Button>
+        <div
+          style={{
+            width: '100vw',
+            height: '4px',
+            position: 'absolute',
+            bottom: '20%',
+            textAlign: '-webkit-center',
+          }}
+        >
+          <Button btnColor="blue" type="outline">
+            Outline Button
+          </Button>
+        </div>
       </div>
       <div
         className="relative flex h-full h-72 w-full max-w-lg overflow-hidden md:hidden lg:hidden"
