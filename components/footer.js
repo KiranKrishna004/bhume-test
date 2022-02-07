@@ -1,7 +1,7 @@
 import React from 'react'
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-center text-gray-600 lg:text-left">
+    <footer className=" pb-0 text-center text-gray-600 lg:text-left">
       <div className="flex items-center justify-center border-b border-gray-300 p-6 lg:justify-between">
         <div className="mr-12 hidden lg:block">
           <span>Get connected with us on social networks:</span>
@@ -208,7 +208,7 @@ const Footer = () => {
                 focusable="false"
                 data-prefix="fas"
                 data-icon="home"
-                className="mr-4 w-4"
+                className="mr-4 w-4 text-green-700"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 576 512"
@@ -226,7 +226,7 @@ const Footer = () => {
                 focusable="false"
                 data-prefix="fas"
                 data-icon="envelope"
-                className="mr-4 w-4"
+                className="mr-4 w-4 text-green-700"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -244,7 +244,7 @@ const Footer = () => {
                 focusable="false"
                 data-prefix="fas"
                 data-icon="phone"
-                className="mr-4 w-4"
+                className="mr-4 w-4 text-green-700"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -262,7 +262,7 @@ const Footer = () => {
                 focusable="false"
                 data-prefix="fas"
                 data-icon="print"
-                className="mr-4 w-4"
+                className="mr-4 w-4 text-green-700"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -277,7 +277,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-gray-200 p-6 text-center">
+      <div className="bg-gray-100 p-6 text-center">
         <span>© 2021 Copyright:</span>
         <a className="font-semibold text-gray-600" href="https://google.com/">
           BhuME
