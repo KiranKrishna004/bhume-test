@@ -48,7 +48,7 @@ const Banner = () => {
             textAlign: '-webkit-center',
           }}
         >
-          <Button btnColor="blue" type="outline">
+          <Button btnColor='#16a34a' type="outline">
             Outline Button
           </Button>
         </div>

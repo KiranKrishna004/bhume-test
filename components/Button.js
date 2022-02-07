@@ -21,12 +21,13 @@ const Button = ({
   }
   const outlineStyles = {
     border: `1px solid ${btnColor}`,
-    color: btnColor,
-    backgroundColor: 'white',
+    color: 'white',
+    backgroundColor: btnColor,
   }
   const outlineHoverStyle = {
-    color: labelColor || 'white',
-    backgroundColor: btnColor,
+    color: labelColor || '#e5e5e5',
+    backgroundColor: 'transparent',
+    border: '1px solid white',
   }
 
   const roundedStyle = {

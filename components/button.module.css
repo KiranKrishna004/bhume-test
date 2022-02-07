@@ -1,18 +1,19 @@
 .btn {
   font-family: 'Ubuntu', sans-serif;
   transform: scale(0.75, 0.75);
-  padding: 5px;
+  padding: 10px;
+  color: black;
   background-color: white;
   border: 2px solid red;
-  font-weight: 400;
+  animation-name: fadeIn;
+  animation-duration: 2s;
   font-size: 1.3rem;
   line-height: 2;
   height: 50px;
   transition: all 200ms linear;
-  border-radius: 4px;
   width: 240px;
   letter-spacing: 1px;
-  display: block;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -22,4 +23,14 @@
   box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
   outline: 0;
   text-transform: capitalize;
+  font-weight: 570;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
