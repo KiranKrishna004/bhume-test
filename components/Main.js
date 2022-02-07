@@ -4,9 +4,9 @@ import TextBox from './textBox'
 
 const Main = () => {
   return (
-    <div className="mt-8 w-full ">
+    <div className="mt-8 mb-8 w-full">
       <Banner />
-      <TextBox />
+      {/* <TextBox /> */}
     </div>
   )
 }
