@@ -4,14 +4,13 @@ import Header from '../components/header'
 import Main from '../components/Main'
 import VideoBanner from '../components/VideoBanner'
 import Shopcard from '../components/Shopcard'
-
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
       <Header />
       <Head>
         <title>BhuME</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <Main />
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
