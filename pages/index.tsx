@@ -22,12 +22,12 @@ export default function Home() {
           </a>
         </h1>
       </main>
-      <div className="h-full w-full flex-wrap justify-around xs:hidden md:flex">
+      <div className="mt-7 mb-7 h-full w-full flex-wrap justify-around xs:hidden md:flex">
         <Shopcard imgLink={true} redirectLink={true} />
         <Shopcard imgLink={true} redirectLink={true} />
         <Shopcard imgLink={true} redirectLink={true} />
       </div>
-      <div className="flex h-full w-full flex-wrap justify-around md:hidden">
+      <div className="mt-7 mb-7 flex h-full w-full flex-wrap justify-around md:hidden">
         <Shopcard imgLink={true} redirectLink={true} />
       </div>
       <VideoBanner />
