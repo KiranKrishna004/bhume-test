@@ -48,7 +48,7 @@ const Banner = () => {
             textAlign: '-webkit-center',
           }}
         >
-          <Button btnColor='#16a34a' type="outline">
+          <Button btnColor="#166534" type="outline">
             Recycled / Handmade
           </Button>
         </div>
@@ -72,6 +72,21 @@ const Banner = () => {
             />
           )
         })}
+        <div
+          style={{
+            width: '100vw',
+            height: '100%',
+            position: 'absolute',
+            flexDirection: 'column',
+            textAlign: '-webkit-center',
+            justifyContent: 'center',
+            display: 'inline-grid',
+          }}
+        >
+          <Button btnColor="#166534" type="outline">
+            Recycled / Handmade
+          </Button>
+        </div>
       </div>
     </div>
   )
