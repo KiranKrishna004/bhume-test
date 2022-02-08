@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 const Banner = () => {
   const largeCarouselData = [
@@ -38,6 +39,19 @@ const Banner = () => {
             />
           )
         })}
+        <div
+          style={{
+            width: '100vw',
+            height: '4px',
+            position: 'absolute',
+            bottom: '20%',
+            textAlign: '-webkit-center',
+          }}
+        >
+          <Button btnColor="#166534" type="outline">
+            Recycled / Handmade
+          </Button>
+        </div>
       </div>
       <div
         className="relative flex h-full h-72 w-full max-w-lg overflow-hidden md:hidden lg:hidden"
@@ -58,6 +72,21 @@ const Banner = () => {
             />
           )
         })}
+        <div
+          style={{
+            width: '100vw',
+            height: '100%',
+            position: 'absolute',
+            flexDirection: 'column',
+            textAlign: '-webkit-center',
+            justifyContent: 'center',
+            display: 'inline-grid',
+          }}
+        >
+          <Button btnColor="#166534" type="outline">
+            Recycled / Handmade
+          </Button>
+        </div>
       </div>
     </div>
   )
