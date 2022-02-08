@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import Main from '../components/Main'
+import VideoBanner from '../components/VideoBanner'
+import Shopcard from '../components/Shopcard'
 
 export default function Home() {
   return (
@@ -12,6 +14,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main />
+      <div className="flex h-full w-full flex-wrap justify-around">
+        <Shopcard imgLink={true} redirectLink={true} />
+        <Shopcard imgLink={true} redirectLink={true} />
+        <Shopcard imgLink={true} redirectLink={true} />
+      </div>
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
@@ -31,6 +38,7 @@ export default function Home() {
           <img src="/vercel.svg" alt="Vercel Logo" className="ml-2 h-4" />
         </a>
       </footer> */}
+      <VideoBanner />
       <Footer />
     </div>
   )
