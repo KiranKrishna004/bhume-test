@@ -11,7 +11,5 @@ module.exports = {
       ...defaultTheme.screens,
     },
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio')
-  ],
+  plugins: [],
 }
