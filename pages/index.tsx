@@ -6,6 +6,7 @@ import VideoBanner from '../components/VideoBanner'
 import Shopcard from '../components/Shopcard'
 import ImageSlider from '../components/ImageSlider'
 import SliderData from '../components/SliderData'
+import ReadMoreSection from '../components/ReadMoreSection'
 
 export default function Home() {
   return (
@@ -33,6 +34,8 @@ export default function Home() {
         <Shopcard imgLink={true} redirectLink={true} />
       </div>
       <VideoBanner />
+      <div className="m-9 flex h-1 justify-center bg-black sm:w-1/4 lg:w-1/4"></div>
+      <ReadMoreSection />
       <Footer />
     </div>
   )
