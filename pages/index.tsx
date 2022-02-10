@@ -4,6 +4,9 @@ import Header from '../components/header'
 import Main from '../components/Main'
 import VideoBanner from '../components/VideoBanner'
 import Shopcard from '../components/Shopcard'
+import ImageSlider from '../components/ImageSlider'
+import SliderData from '../components/SliderData'
+import ReadMoreSection from '../components/ReadMoreSection'
 
 export default function Home() {
   return (
@@ -11,7 +14,7 @@ export default function Home() {
       <Header />
       <Head>
         <title>BhuME</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <Main />
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
@@ -22,15 +25,17 @@ export default function Home() {
           </a>
         </h1>
       </main>
+      <div className="my-5 w-full object-fill md:hidden">
+        <ImageSlider slides={SliderData} />
+      </div>
       <div className="mt-7 mb-7 h-full w-full flex-wrap justify-around xs:hidden md:flex">
         <Shopcard imgLink={true} redirectLink={true} />
         <Shopcard imgLink={true} redirectLink={true} />
         <Shopcard imgLink={true} redirectLink={true} />
       </div>
-      <div className="mt-7 mb-7 flex h-full w-full flex-wrap justify-around md:hidden">
-        <Shopcard imgLink={true} redirectLink={true} />
-      </div>
       <VideoBanner />
+      <div className="m-9 flex h-1 justify-center bg-black sm:w-1/4 lg:w-1/4"></div>
+      <ReadMoreSection />
       <Footer />
     </div>
   )
