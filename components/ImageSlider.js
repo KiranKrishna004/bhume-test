@@ -3,7 +3,7 @@ import { SliderData } from './SliderData'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 import styles from './ImageSlider.module.css'
 import ShopButton from './ShopButton'
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ slides, btnText }) => {
   const [current, setCurrent] = useState(0)
   const length = slides.length
 
@@ -26,7 +26,7 @@ const ImageSlider = ({ slides }) => {
         className={styles.rightarrow}
         onClick={nextSlide}
       />
-      {SliderData.map((slide, index) => {
+      {slides.map((slide, index) => {
         return (
           <div
             className={index === current ? styles.slide.active : styles.slide}
@@ -51,7 +51,7 @@ const ImageSlider = ({ slides }) => {
         }}
       >
         <ShopButton btnColor="black" type="outline" width="100%">
-          Shop Now
+          {btnText}
         </ShopButton>
       </div>
     </section>
