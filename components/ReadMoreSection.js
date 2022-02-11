@@ -2,7 +2,7 @@ import React from 'react'
 import ShopButton from './ShopButton'
 const ReadMoreSection = () => {
   return (
-    <div className="mb-5 flex h-auto sm:flex-nowrap lg:w-5/6">
+    <div className="mb-5 flex h-auto xs:hidden md:inline-flex lg:w-5/6">
       <div className="relative xs:w-full">
         <img
           className="md:h-auto md:w-auto"
