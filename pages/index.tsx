@@ -7,7 +7,8 @@ import Shopcard from '../components/Shopcard'
 import ImageSlider from '../components/ImageSlider'
 import SliderData from '../components/SliderData'
 import ReadMoreSection from '../components/ReadMoreSection'
-
+import ReadSliderData from '../components/ReadSilderData'
+import TextBoxIntend from '../components/TextBoxIntend'
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
@@ -25,8 +26,9 @@ export default function Home() {
           </a>
         </h1>
       </main>
+      <TextBoxIntend />
       <div className="my-5 w-full object-fill md:hidden">
-        <ImageSlider slides={SliderData} />
+        <ImageSlider slides={SliderData} btnText="Shop Now" />
       </div>
       <div className="mt-7 mb-7 h-full w-full flex-wrap justify-around xs:hidden md:flex">
         <Shopcard imgLink={true} redirectLink={true} />
@@ -36,6 +38,9 @@ export default function Home() {
       <VideoBanner />
       <div className="m-9 flex h-1 justify-center bg-black sm:w-1/4 lg:w-1/4"></div>
       <ReadMoreSection />
+      <div className="my-5 w-full object-fill md:hidden">
+        <ImageSlider slides={ReadSliderData} btnText="Read More" />
+      </div>
       <Footer />
     </div>
   )
