@@ -9,6 +9,8 @@ import SliderData from '../components/SliderData'
 import ReadMoreSection from '../components/ReadMoreSection'
 import ReadSliderData from '../components/ReadSilderData'
 import TextBoxIntend from '../components/TextBoxIntend'
+import TextMD from '../components/TextMD'
+
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
@@ -27,6 +29,7 @@ export default function Home() {
         </h1>
       </main>
       <TextBoxIntend />
+      <TextMD />
       <div className="my-5 w-full object-fill md:hidden">
         <ImageSlider slides={SliderData} btnText="Shop Now" />
       </div>
