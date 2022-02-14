@@ -3,6 +3,7 @@ import { SliderData } from './SliderData'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 import styles from './ImageSlider.module.css'
 import ShopButton from './ShopButton'
+import Slider from 'react-touch-drag-slider'
 const ImageSlider = ({ slides, btnText }) => {
   const [current, setCurrent] = useState(0)
   const length = slides.length
@@ -20,41 +21,38 @@ const ImageSlider = ({ slides, btnText }) => {
   }
 
   return (
-    <section className={styles.slider}>
-      <FaArrowAltCircleLeft className={styles.leftarrow} onClick={prevSlide} />
-      <FaArrowAltCircleRight
-        className={styles.rightarrow}
-        onClick={nextSlide}
-      />
-      {slides.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? styles.slide.active : styles.slide}
-            key={index}
-          >
-            {index === current && (
-              <img
-                src={slide.image}
-                alt="travel image"
-                className={styles.image}
-              />
-            )}
-          </div>
-        )
-      })}
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '20%',
-          left: '20%',
-          textAlign: '-webkit-center',
+    <div className="h-80">
+      <Slider
+        onSlideComplete={(i) => {
+          console.log('finished dragging, current slide is', i)
         }}
+        onSlideStart={(i) => {
+          console.log('started dragging on slide', i)
+        }}
+        activeIndex={0}
+        threshHold={150}
+        transition={0.5}
+        scaleOnDrag={true}
       >
-        <ShopButton btnColor="black" type="outline" width="100%">
-          {btnText}
-        </ShopButton>
-      </div>
-    </section>
+        {slides.map((slide, index) => (
+          <div className={`${styles.image} relative `}>
+            <img src={slide.image} key={index} />
+            <div
+              style={{
+                position: 'absolute',
+                top: '20%',
+                right: '20%',
+                textAlign: '-webkit-center',
+              }}
+            >
+              <ShopButton btnColor="black" type="outline" width="25%">
+                {btnText}
+              </ShopButton>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
   )
 }
 
