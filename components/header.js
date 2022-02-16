@@ -1,21 +1,37 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-
 import { SearchIcon, UserIcon, ShoppingCartIcon } from '@heroicons/react/solid'
-
-const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Shop', href: '#', current: false },
-  { name: 'About', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
-]
+import { useRouter } from 'next/router'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Example() {
+  const router = useRouter()
+  const navigation = [
+    {
+      name: 'Home',
+      href: '/',
+      current: router.pathname === '/' ? true : false,
+    },
+    {
+      name: 'Shop',
+      href: '#',
+      current: router.pathname === '/shop' ? true : false,
+    },
+    {
+      name: 'About',
+      href: '#',
+      current: router.pathname === '/about' ? true : false,
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      current: router.pathname === '/contact' ? true : false,
+    },
+  ]
   return (
     <Disclosure as="nav" className="w-full bg-white">
       {({ open }) => (
