@@ -36,9 +36,9 @@ export default function Home() {
           <ImageSlider slides={SliderData} btnText="Shop Now" />
         </div>
         <div className="mt-7 mb-7 h-full w-full flex-wrap justify-around xs:hidden md:flex">
-          <Shopcard imgLink={true} redirectLink={true} />
-          <Shopcard imgLink={true} redirectLink={true} />
-          <Shopcard imgLink={true} redirectLink={true} />
+          {ShopCardData.map((obj) => (
+            <Shopcard imgLink={obj.image} redirectLink={true} />
+          ))}
         </div>
         <VideoBanner />
         <div className="m-9 flex h-1 justify-center bg-black sm:w-1/4 lg:w-1/4"></div>
