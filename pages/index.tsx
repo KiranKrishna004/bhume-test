@@ -14,25 +14,39 @@ import TextMD from '../components/TextMD'
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
+    <>
       <Header />
-      <Head>
-        <title>BhuME</title>
-        <link rel="icon" href="/logo.png" />
-      </Head>
-      <Main />
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-green-600" href="https://nextjs.org">
-            BhuME
-          </a>
-        </h1>
-      </main>
-      <TextBoxIntend />
-      <TextMD />
-      <div className="my-5 w-full object-fill md:hidden">
-        <ImageSlider slides={SliderData} btnText="Shop Now" />
+      <div className="flex min-h-screen flex-col items-center justify-center">
+        <Head>
+          <title>BhuME</title>
+          <link rel="icon" href="/logo.png" />
+        </Head>
+        <Main />
+        <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+          <h1 className="text-6xl font-bold">
+            Welcome to{' '}
+            <a className="text-green-600" href="https://nextjs.org">
+              BhuME
+            </a>
+          </h1>
+        </main>
+        <TextBoxIntend />
+        <TextMD />
+        <div className="my-5 w-full object-fill md:hidden">
+          <ImageSlider slides={SliderData} btnText="Shop Now" />
+        </div>
+        <div className="mt-7 mb-7 h-full w-full flex-wrap justify-around xs:hidden md:flex">
+          <Shopcard imgLink={true} redirectLink={true} />
+          <Shopcard imgLink={true} redirectLink={true} />
+          <Shopcard imgLink={true} redirectLink={true} />
+        </div>
+        <VideoBanner />
+        <div className="m-9 flex h-1 justify-center bg-black sm:w-1/4 lg:w-1/4"></div>
+        <ReadMoreSection />
+        <div className="my-5 w-full object-fill md:hidden">
+          <ImageSlider slides={ReadSliderData} btnText="Read More" />
+        </div>
+        <Footer />
       </div>
       <div className="mt-7 mb-7 h-full w-full flex-wrap xs:hidden md:flex">
         {ShopCardData.map((obj) => (
@@ -46,6 +60,6 @@ export default function Home() {
         <ImageSlider slides={ReadSliderData} btnText="Read More" />
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
