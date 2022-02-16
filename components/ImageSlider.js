@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { SliderData } from './SliderData'
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
+/* import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa' */
 import styles from './ImageSlider.module.css'
 import ShopButton from './ShopButton'
 import Slider from 'react-touch-drag-slider'
@@ -45,7 +45,7 @@ const ImageSlider = ({ slides, btnText }) => {
                 textAlign: '-webkit-center',
               }}
             >
-              <ShopButton btnColor="black" type="outline" width="25%">
+              <ShopButton btnColor="transparent" type="outline" width="25%">
                 {btnText}
               </ShopButton>
             </div>
