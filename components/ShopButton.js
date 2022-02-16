@@ -21,16 +21,16 @@ const ShopButton = ({
     color: labelColor || 'white',
   }
   const outlineStyles = {
-    border: `1px solid ${btnColor}`,
+    border: `2px solid ${btnColor === 'transparent' ? 'white' : btnColor}`,
     color: 'white',
     backgroundColor: btnColor,
-    width:width,
+    width: width,
   }
   const outlineHoverStyle = {
     color: labelColor || '#e5e5e5',
     backgroundColor: 'transparent',
     border: '1px solid white',
-    width:width,
+    width: width,
   }
 
   const roundedStyle = {

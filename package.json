@@ -13,7 +13,8 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-player": "^2.9.0",
-    "react-svg": "^14.1.10"
+    "react-svg": "^14.1.10",
+    "react-touch-drag-slider": "^2.1.3"
   },
   "devDependencies": {
     "@types/node": "17.0.4",
