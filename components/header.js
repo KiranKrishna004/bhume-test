@@ -1,82 +1,136 @@
-/*  ./components/Navbar.jsx     */
-import Link from 'next/link'
-import { useState } from 'react'
+import { Fragment } from 'react'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-const Navbar = () => {
-  const [active, setActive] = useState(false)
+import { SearchIcon, UserIcon, ShoppingCartIcon } from '@heroicons/react/solid'
 
-  const handleClick = () => {
-    setActive(!active)
-  }
+const navigation = [
+  { name: 'Home', href: '#', current: true },
+  { name: 'Shop', href: '#', current: false },
+  { name: 'About', href: '#', current: false },
+  { name: 'Contact', href: '#', current: false },
+]
 
-  return (
-    <>
-      <nav className="flex w-full flex-wrap items-center p-3">
-        <Link href="/">
-          <a className="mr-4 inline-flex items-center p-2 ">
-            <svg
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              className="mr-2 h-8 w-8 fill-current"
-            >
-              <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" />
-            </svg>
-            <span className="text-xl font-bold uppercase tracking-wide">
-              BhuME
-            </span>
-          </a>
-        </Link>
-        <button
-          className=" ml-auto inline-flex rounded p-3 outline-none hover:bg-green-600 hover:text-white lg:hidden"
-          onClick={handleClick}
-        >
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-        {/*Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
-        <div
-          className={`${
-            active ? '' : 'hidden'
-          }   w-full lg:inline-flex lg:w-auto lg:flex-grow`}
-        >
-          <div className="flex w-full flex-col items-start lg:ml-auto lg:inline-flex lg:h-auto  lg:w-auto lg:flex-row lg:items-center">
-            <Link href="/">
-              <a className="w-full items-center justify-center rounded px-3 py-2 font-bold hover:bg-green-600 hover:text-white lg:inline-flex lg:w-auto ">
-                Home
-              </a>
-            </Link>
-            <Link href="/">
-              <a className="w-full items-center justify-center rounded px-3 py-2 font-bold hover:bg-green-600 hover:text-white lg:inline-flex lg:w-auto">
-                Shop
-              </a>
-            </Link>
-            <Link href="/">
-              <a className="w-full items-center justify-center rounded px-3 py-2 font-bold hover:bg-green-600 hover:text-white lg:inline-flex lg:w-auto">
-                About
-              </a>
-            </Link>
-            <Link href="/">
-              <a className="w-full items-center justify-center rounded px-3 py-2 font-bold hover:bg-green-600 hover:text-white lg:inline-flex lg:w-auto">
-                Contact
-              </a>
-            </Link>
-          </div>
-        </div>
-      </nav>
-    </>
-  )
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
 }
 
-export default Navbar
+export default function Example() {
+  return (
+    <Disclosure as="nav" className="w-full bg-white">
+      {({ open }) => (
+        <>
+          <div className=" px-2 sm:px-6 lg:px-8">
+            <div className="relative flex h-16 items-center justify-between">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex flex-shrink-0 items-center">
+                  <img
+                    className="block h-8 w-auto lg:hidden"
+                    src="https://bhume-test.vercel.app/_next/image?url=%2Flogo.png&w=96&q=75"
+                    alt="Workflow"
+                  />
+                  <img
+                    className="hidden h-8 w-auto lg:block"
+                    src="https://bhume-test.vercel.app/_next/image?url=%2Flogo.png&w=96&q=75"
+                    alt="Workflow"
+                  />
+                </div>
+                <div
+                  className="hidden sm:ml-6 sm:block"
+                  style={{ marginInline: 'auto' }}
+                >
+                  <div className="flex space-x-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current
+                            ? 'inline-block rounded-none border-b-2 border-black	p-8 text-black'
+                            : 'rounded-none text-black hover:border-b-2 hover:border-gray-200',
+                          'rounded-md px-3 py-2 text-sm font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="absolute inset-y-0 right-0 flex items-center space-x-2 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <button
+                  type="button"
+                  className="hidden p-1 text-black hover:text-black sm:block"
+                >
+                  <span className="sr-only">Search</span>
+                  <SearchIcon
+                    className="h-6 w-6 text-black"
+                    aria-hidden="true"
+                    fill={true}
+                  />
+                </button>
+
+                <button
+                  type="button"
+                  className=" p-1 text-black hover:text-black "
+                >
+                  <span className="sr-only">My Cart</span>
+                  <ShoppingCartIcon
+                    className="h-6 w-6 text-black"
+                    aria-hidden="true"
+                    fill={true}
+                  />
+                </button>
+
+                <button
+                  type="button"
+                  className="hidden p-1 text-black hover:text-black sm:block"
+                >
+                  <span className="sr-only">My Account</span>
+                  <UserIcon
+                    className="h-6 w-6 text-black"
+                    aria-hidden="true"
+                    fill={true}
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 px-2 pt-2 pb-3">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    item.current
+                      ? 'bg-gray-300 text-black'
+                      : 'text-black hover:bg-gray-200 hover:text-black',
+                    'block rounded-md px-3 py-2 text-base font-medium'
+                  )}
+                  aria-current={item.current ? 'page' : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
+  )
+}
