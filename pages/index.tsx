@@ -35,7 +35,7 @@ export default function Home() {
         <div className="my-5 w-full object-fill md:hidden">
           <ImageSlider slides={SliderData} btnText="Shop Now" />
         </div>
-        <div className="mt-7 mb-7 h-full w-full flex-wrap justify-around xs:hidden md:flex">
+        <div className="mt-7 mb-7 h-full w-full flex-wrap xs:hidden md:flex">
           {ShopCardData.map((obj) => (
             <Shopcard imgLink={obj.image} redirectLink={true} />
           ))}
@@ -48,18 +48,6 @@ export default function Home() {
         </div>
         <Footer />
       </div>
-      <div className="mt-7 mb-7 h-full w-full flex-wrap xs:hidden md:flex">
-        {ShopCardData.map((obj) => (
-          <Shopcard imgLink={obj.image} redirectLink={true} />
-        ))}
-      </div>
-      <VideoBanner />
-      <div className="m-9 flex h-1 justify-center bg-black sm:w-1/4 lg:w-1/4"></div>
-      <ReadMoreSection />
-      <div className="my-5 w-full object-fill md:hidden">
-        <ImageSlider slides={ReadSliderData} btnText="Read More" />
-      </div>
-      <Footer />
     </>
   )
 }
