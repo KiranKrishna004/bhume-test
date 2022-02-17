@@ -78,7 +78,6 @@ export default function Example() {
                   <SearchIcon
                     className="h-6 w-6 text-black"
                     aria-hidden="true"
-                    fill={true}
                   />
                 </button>
 
@@ -90,7 +89,6 @@ export default function Example() {
                   <ShoppingCartIcon
                     className="h-6 w-6 text-black"
                     aria-hidden="true"
-                    fill={true}
                   />
                 </button>
 
@@ -99,11 +97,7 @@ export default function Example() {
                   className="hidden p-1 text-black hover:text-black sm:block"
                 >
                   <span className="sr-only">My Account</span>
-                  <UserIcon
-                    className="h-6 w-6 text-black"
-                    aria-hidden="true"
-                    fill={true}
-                  />
+                  <UserIcon className="h-6 w-6 text-black" aria-hidden="true" />
                 </button>
               </div>
             </div>

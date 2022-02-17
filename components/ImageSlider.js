@@ -30,7 +30,7 @@ const ImageSlider = ({ slides, btnText }) => {
           console.log('started dragging on slide', i)
         }}
         activeIndex={0}
-        threshHold={150}
+        threshHold={100}
         transition={0.5}
         scaleOnDrag={true}
       >
