@@ -30,7 +30,7 @@ const ImageSlider = ({ slides, btnText }) => {
           console.log('started dragging on slide', i)
         }}
         activeIndex={0}
-        threshHold={150}
+        threshHold={100}
         transition={0.5}
         scaleOnDrag={true}
       >
@@ -45,7 +45,7 @@ const ImageSlider = ({ slides, btnText }) => {
                 textAlign: '-webkit-center',
               }}
             >
-              <ShopButton btnColor="transparent" type="outline" width="25%">
+              <ShopButton btnColor="transparent" type="outline" width="35%">
                 {btnText}
               </ShopButton>
             </div>
