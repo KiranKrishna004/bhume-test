@@ -1,6 +1,5 @@
 import ShopButton from './ShopButton'
 import { useState, useEffect } from 'react'
-import FormInfo from './FormInfo'
 
 const initFormState = {
   Name: '',
