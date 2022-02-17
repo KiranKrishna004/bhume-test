@@ -45,7 +45,7 @@ const ImageSlider = ({ slides, btnText }) => {
                 textAlign: '-webkit-center',
               }}
             >
-              <ShopButton btnColor="transparent" type="outline" width="25%">
+              <ShopButton btnColor="transparent" type="outline" width="35%">
                 {btnText}
               </ShopButton>
             </div>
