@@ -3,7 +3,7 @@ import React from 'react'
 import Header from '../components/header'
 
 import Footer from '../components/footer'
-import AboutText from '../components/aboutc/abouttext'
+import AboutText from '../components/aboutContent/abouttext'
 
 export default function Hello() {
   return (

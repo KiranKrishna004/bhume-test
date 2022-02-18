@@ -1,6 +1,6 @@
 import React from 'react'
-import AboutSlider from '../aboutC/AboutSlider'
-import AboutSlide from '../aboutC/aboutslide'
+import AboutSlider from '../aboutContent/AboutSlider'
+import AboutSlide from '../aboutContent/aboutslide'
 
 const AboutText = () => {
   return (
