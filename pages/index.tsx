@@ -40,10 +40,11 @@ export default function Home() {
             <Shopcard imgLink={obj.image} redirectLink={true} />
           ))}
         </div>
+        <div className="h-1 w-1/4 bg-black xs:mt-1 xs:mb-10 md:mt-5 "></div>
         <VideoBanner />
-        <div className="m-9 flex h-1 justify-center bg-black sm:w-1/4 lg:w-1/4"></div>
+        <div className="flex h-1 w-1/4 justify-center bg-black xs:mt-10 xs:mb-7 md:m-10"></div>
         <ReadMoreSection />
-        <div className="my-5 w-full object-fill md:hidden">
+        <div className=" w-full object-fill md:hidden">
           <ImageSlider slides={ReadSliderData} btnText="Read More" />
         </div>
         <Footer />
