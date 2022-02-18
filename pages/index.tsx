@@ -36,8 +36,8 @@ export default function Home() {
           <ImageSlider slides={SliderData} btnText="Shop Now" />
         </div>
         <div className="mt-7 mb-7 h-full w-full flex-wrap xs:hidden md:flex">
-          {ShopCardData.map((obj) => (
-            <Shopcard imgLink={obj.image} redirectLink={true} />
+          {ShopCardData.map((obj, index) => (
+            <Shopcard imgLink={obj.image} key={index} redirectLink={true} />
           ))}
         </div>
         <div className="h-1 w-1/4 bg-black xs:mt-1 xs:mb-10 md:mt-5 "></div>
