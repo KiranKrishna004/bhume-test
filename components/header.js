@@ -23,7 +23,7 @@ export default function Example() {
     },
     {
       name: 'About',
-      href: '#',
+      href: '/about',
       current: router.pathname === '/about' ? true : false,
     },
     {

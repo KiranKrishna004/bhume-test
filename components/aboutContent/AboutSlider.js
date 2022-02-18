@@ -36,7 +36,7 @@ const AboutSlider = ({ slides }) => {
         scaleOnDrag={true}
       >
         {slides.map((slide, index) => (
-          <div className={`${styles.image} relative `}>
+          <div key={index} className={`${styles.image} relative `}>
             <img src={slide.image} key={index} />
             <div
               style={{
