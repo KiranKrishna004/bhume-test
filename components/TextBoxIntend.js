@@ -2,8 +2,8 @@ import React from 'react'
 
 const TextBoxIntend = () => {
   return (
-    <div>
-      <div className="mt-4 flex flex-col items-center text-center leading-loose xs:m-5 sm:hidden">
+    <div className="m-4">
+      <div className="flex flex-col items-center text-center leading-loose xs:m-5 sm:hidden">
         <div className="m-2"></div>
         <div className="font-semibold xs:m-2 sm:m-3 "></div>
         <p className="text-gray-500">
@@ -25,7 +25,7 @@ const TextBoxIntend = () => {
         </p>
       </div>
       <div className="flex w-full justify-center">
-        <div className="m-5 h-1 w-14  bg-black"></div>
+        <div className="mt-7 h-1 w-14  bg-black"></div>
       </div>
     </div>
   )
