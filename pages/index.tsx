@@ -11,6 +11,8 @@ import ReadMoreSection from '../components/ReadMoreSection'
 import ReadSliderData from '../components/ReadSilderData'
 import TextBoxIntend from '../components/TextBoxIntend'
 import TextMD from '../components/TextMD'
+import ProcessIcons from '../components/ProcessIcons'
+import PrcsIconsData from '../components/PrcsIconsData'
 
 export default function Home() {
   return (
@@ -46,6 +48,21 @@ export default function Home() {
         <ReadMoreSection />
         <div className=" w-full object-fill md:hidden">
           <ImageSlider slides={ReadSliderData} btnText="Read More" />
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center pt-20 ">
+            <p className="text-3xl">Our Process</p>
+            <p className="flex items-center py-5 text-center">
+              Saved from being dumped in landfills, these jeans have begun a new
+              journey by being turned into bags.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-between px-5 py-5 md:w-1/2">
+            {PrcsIconsData.map((obj, index) => (
+              <ProcessIcons imgSrc={obj.image} text={obj.text} />
+            ))}
+          </div>
         </div>
         <Footer />
       </div>
