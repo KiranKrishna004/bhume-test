@@ -58,7 +58,10 @@ const Footer = () => {
               ></path>
             </svg>
           </a>
-          <a href="#!" className="mr-6 text-gray-600">
+          <a
+            href="https://instagram.com/bhume_wc"
+            className="mr-6 text-gray-600"
+          >
             <svg
               aria-hidden="true"
               focusable="false"
