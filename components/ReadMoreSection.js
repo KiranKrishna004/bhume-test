@@ -3,9 +3,9 @@ import ShopButton from './ShopButton'
 const ReadMoreSection = () => {
   return (
     <div className="mb-5 flex h-auto xs:hidden md:inline-flex lg:w-5/6">
-      <div className="relative overflow-hidden bg-black xs:w-full">
+      <div className="group relative overflow-hidden bg-black xs:w-full">
         <img
-          className="transform bg-cover bg-center transition-all duration-500 ease-in-out hover:scale-150 hover:opacity-50 md:h-auto md:w-auto"
+          className="transform bg-cover bg-center transition-all duration-500 ease-in-out group-hover:scale-150 group-hover:opacity-50 md:h-auto md:w-auto"
           src="https://blog.ipleaders.in/wp-content/uploads/2021/01/img-20190306-5c7f72b3a4ca1.jpg"
         />
         <div
@@ -22,9 +22,9 @@ const ReadMoreSection = () => {
         </div>
       </div>
       <div className="m-9 flex h-1 w-full justify-center bg-black sm:hidden"></div>
-      <div className="relative overflow-hidden bg-black xs:w-full">
+      <div className="group relative overflow-hidden bg-black xs:w-full">
         <img
-          className="transform bg-cover bg-center transition-all duration-500 ease-in-out hover:scale-150 hover:opacity-50 md:h-auto md:w-auto"
+          className="transform bg-cover bg-center transition-all duration-500 ease-in-out group-hover:scale-150 group-hover:opacity-50 md:h-auto md:w-auto"
           src="https://blog.ipleaders.in/wp-content/uploads/2021/01/img-20190306-5c7f72b3a4ca1.jpg"
         />
         <div
