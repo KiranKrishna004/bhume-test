@@ -2,11 +2,11 @@ import React from 'react'
 
 const Article = () => {
   return (
-    <div className="flex min-h-screen flex-row items-center justify-center px-4">
-      <div className="relative flex justify-center overflow-hidden bg-black xs:w-full">
+    <div className="flex max-h-min flex-row items-center justify-center px-4">
+      <div className="relative flex w-1/2 justify-center overflow-hidden bg-black xs:w-full">
         <img
-          className="transform bg-cover bg-center transition-all duration-500 ease-in-out hover:scale-150 hover:opacity-50 md:h-auto md:w-auto"
-          src="https://static.toiimg.com/thumb/msid-53415848,imgsize-872949,width-400,resizemode-4/53415848.jpg"
+          className="h-auto w-full transform bg-cover bg-center transition-all duration-500 ease-in-out hover:scale-150 hover:opacity-50"
+          src="../assets/firstimg.jpg"
         />
         <div
           style={{
@@ -30,10 +30,10 @@ const Article = () => {
           </div>
         </div>
       </div>
-      <div className="relative overflow-hidden bg-black xs:w-full">
+      <div className="relative max-h-min w-1/2 overflow-hidden bg-black xs:w-full">
         <img
-          className="transform bg-cover bg-center transition-all duration-500 ease-in-out hover:scale-150 hover:opacity-50 md:h-auto md:w-auto"
-          src="https://dc-cdn.s3-ap-southeast-1.amazonaws.com/dc-Cover-jmoi78f0uhfgsmfb3q6v0invp5-20160701063851.Medi.jpeg"
+          className="h-full transform bg-cover bg-center transition-all duration-500 ease-in-out hover:scale-150 hover:opacity-50 md:w-auto"
+          src="../assets/secondimg.jpg"
         />
         <div
           style={{
